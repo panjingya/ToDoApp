@@ -13,5 +13,6 @@ Using the view name to find in the view templates and response back with JSP.
 Log4j
 
 --Functionality
-
+Todo -> object
+TodoService includes all the basic operations for Todo. By using the dependency injection, the @service is automatically wired in the controller.
 
