@@ -9,6 +9,9 @@ If there is no @ResponseBody means the String stands for a view name, so Dispatc
 Using the view name to find in the view templates and response back with JSP.
 
 --Framework to help debugging
+
 Log4j
 
 --Functionality
+
+
