@@ -1,4 +1,4 @@
-package webapp;
+package com.springmvc.jee;
 
 public class UserValidationService {
   public boolean isUserValid(String name,String password) {

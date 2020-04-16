@@ -1,4 +1,4 @@
-package webapp;
+package com.springmvc.jee;
 
 import java.io.IOException;
 import java.io.PrintWriter;
