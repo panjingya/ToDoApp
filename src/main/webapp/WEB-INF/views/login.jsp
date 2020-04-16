@@ -7,6 +7,12 @@
 <title>Login Page</title>
 </head>
 <body>
-JSP Page
+<form action="/login.do" method="post">
+	Name: <input type="text" name="name" />
+	Password: <input type="password" name="password" />
+	<br>
+	<input type="submit" value="login"> 
+</form>
+<p><font color="red">${errorMsg}</font></p>
 </body>
 </html>
