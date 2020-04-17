@@ -4,10 +4,12 @@
 <head>
 <meta charset="UTF-8">
 <title>To Do</title>
+<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" >
 </head>
 <body>
 Hi ${name} <br/>
-<table>
+<div class="container">
+<table class="table table-striped">
 	<caption>
 		Your Todos are
 	</caption>
@@ -28,7 +30,11 @@ Hi ${name} <br/>
 		</c:forEach>
 	</tbody>
 </table>
-
-<a class="button" href="/add-todo">Add</a>
+<div>
+	<a class="btn btn-success" href="/add-todo">Add</a>
+</div>
+</div>
+<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
