@@ -10,7 +10,7 @@
 
 ---ToDoApp workflow
 
-   1. Enter url http://localhost:8080/login, and username:May password:123
+   1. Enter url http://localhost:8080/login, and username:May, password:123
 
    2. By clicking hyperlink: manage your todos, direct you to the list-todos.jsp
 
