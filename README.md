@@ -16,3 +16,13 @@ Log4j
 Todo -> object
 TodoService includes all the basic operations for Todo. By using the dependency injection, the @service is automatically wired in the controller.
 
+DeleteTodo
+
+UpdateTodo
+
+--SpringMVC security
+Set the role and accessibility
+
+--Internationalization with SpringMVC
+when typing url  http://localhost:8080 default language is English
+when typing url http://localhost:8080?language=fr. language will switch to french
