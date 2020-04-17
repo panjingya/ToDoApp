@@ -5,6 +5,8 @@ import java.util.Date;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -30,12 +32,19 @@ public class TodoController {
   
   @RequestMapping(value="/list-todos", method = RequestMethod.GET)
   public String showTodoList(ModelMap model) {
-    model.put("todos", service.retrieveTodos("May"));
+    model.put("todos", service.retrieveTodos(retrieveLoggedinUserName()));
     return "list-todos";
+  }
+  private String retrieveLoggedinUserName() {
+    Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+    if(principal instanceof UserDetails) {
+      return ((UserDetails)principal).getUsername();
+    }
+    return principal.toString();
   }
   @RequestMapping(value = "/add-todo", method = RequestMethod.GET)
   public String showTodoPage(ModelMap model) {
-    model.put("todo", new Todo(0, "May", "Default Desc", new Date(), false));
+    model.put("todo", new Todo(0, retrieveLoggedinUserName(), "Default Desc", new Date(), false));
     return "todo";
   }
   @RequestMapping(value = "/add-todo", method = RequestMethod.POST)
@@ -43,7 +52,7 @@ public class TodoController {
     if(result.hasErrors()) {
       return "todo";
     }
-    service.addTodo("May", todo.getDesc(), new Date(), false);
+    service.addTodo(retrieveLoggedinUserName(), todo.getDesc(), new Date(), false);
     model.clear();
     return "redirect:list-todos";
   }
