@@ -29,4 +29,4 @@
 
    when typing url  http://localhost:8080 default language is English
 
-   when typing url http://localhost:8080?language=fr. language will switch to french
+   when typing url http://localhost:8080?language=fr ,language will switch to french
