@@ -18,8 +18,7 @@
 
    4. Logout the system by clicking the right-upper corner link. Every user need to login before doing any operations on the system.Logout will clear the recoprd.
 
-   Todo -> object
-   TodoService includes all the basic operations for Todo. By using the dependency injection, the @service is automatically wired in the controller.
+   5. Todo is an object; TodoService includes all the basic operations for Todo. By using the dependency injection, the @service is automatically wired in the controller.
 
 --Framework to help debugging: Log4j
 
