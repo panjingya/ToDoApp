@@ -3,13 +3,13 @@
 <div class="container">
 <table class="table table-striped">
 	<caption>
-		Your Todos are
+		<spring:message code="todo.caption"></spring:message>
 	</caption>
 	<thead>
 		<tr>
-			<th>Description</th>
-			<th>Target Date</th>
-			<th>Is completed?</th>
+			<th><spring:message code="todo.description"></spring:message></th>
+			<th><spring:message code="todo.targetDate"></spring:message></th>
+			<th><spring:message code="todo.IsComplete"></spring:message></th>
 			<th></th>
 		</tr>
 	</thead>
