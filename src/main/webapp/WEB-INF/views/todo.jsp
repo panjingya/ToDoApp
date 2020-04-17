@@ -4,10 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Add todo </title>
 </head>
 <body>
-Welcome ${name}<br/>
-Now you can <a href="/list-todos">manage your todos</a>
+<form method="post">
+	<input type="text" name="desc" >
+	<input type="submit" value="Add" >
+</form>
 </body>
 </html>
